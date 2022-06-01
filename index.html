@@ -1,42 +1,32 @@
 <html>
     <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
         <title>KARIB</title>
         <body>
-            <header>
-                <div class="logo">
-                   <a href="#">
-                     <img src="assets/image/Logo.png" alt="Logo" />
-                   </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#activity">
-                                Activity
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+          <header class="header">
+            <nav class="navbar" style="left: 0; top: 0;">
+              <div class="navbar-container container">
+                  <input type="checkbox" name="" id="">
+                  <div class="hamburger-lines">
+                      <span class="line line1"></span>
+                      <span class="line line2"></span>
+                      <span class="line line3"></span>
+                  </div>
+                  <ul class="menu-items">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#activity">Activity</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+                  <img src="assets/image/Logo.png" alt="logo" style="width: 100px;">
+              </div>
+          </nav>
+    </header>
             <div class="container">
               <section>
                     <!-- start slide show -->
@@ -67,9 +57,42 @@
               </section>
               <section id="about" class="about">
                   <h1>ABOUT US</h1>
-                  <p>
-                    KARIB atau Keluarga Remaja Islam BSD adalah sebuah komnunitas ....
-                  </p>
+                  <div class="about-desc">
+                    <p>
+                      KARIB adalah organisasi yang memiliki kepanjangan - KELUARGA REMAJA ISLAM BSD, FORUM MASJID DAN MUSHOLLA SE-BSD, yang selanjutnya disebut KARIB FMMB
+                    </p>
+                    <p>
+                      KARIB FMMB didirikan pada 10 April 2011, yang berkedudukan dibawah asuhan FMMB khususnya Seksi Pemuda, Olahraga, dan Seni.
+                      KARIB FFMB berAsaskan Aqidah Ahlusunnah Wal Jamaah, yang bersifat kekeluargaan dan persaudaraan.
+                    </p>
+                  </div>
+                  <div class="visi-misi">
+                      <h5>Visi :</h5>
+                      <ol>
+                        <li>Mensyiarkan Islam dikalangan umat Islam dan remaja/ pemuda pada khususnya.</li>
+                        <li>Menjalin rasa kekeluargaan antar sesama anggota.</li>
+                        <li>Membina dan meningkatkan peran umat Islam dalam kegiatan sosial kemasyarakatan menuju masyarakat Islami / BSD KOTA SANTRI.</li>
+                      </ol>
+                  </div>
+                  <div class="visi-misi">
+                    <h5>Misi :</h5>
+                    <ol>
+                      <li>Menambah ilmu dan wawasan keislaman bagi pribadi dan organisasi.</li>
+                      <li>Melakukan kegiatan sosial kemasyarakatan dalam rangka menumbuhkan kepekaan dan kepedulian sosial.</li>
+                      <li>Mengajak Pemuda dan Remaja muslim untuk turut serta dalam memakmurkan masjid.</li>
+                      <li>Membekali pemuda dan Remaja dengan kajian keislaman.</li>
+                    </ol>
+                  </div>
+                  <div class="visi-misi">
+                    <h5>Tujuan :</h5>
+                    <ol>
+                      <li>Mensyiarkan Islam dikalangan umat Islam dan remaja/ pemuda pada khususnya.</li>
+                      <li>Menjalin rasa kekeluargaan antar sesama anggota dan bekerja sama dengan organisasi lain.</li>
+                      <li>Membina dan meningkatkan peran umat Islam dalam kegiatan sosial kemasyarakatan menuju masyarakat Islami.</li>
+                      <li>KARIB-FMMB sejalan dengan tujuan dari Forum Masjid Musholla BSD dan sekitarnya, yaitu bertujuan menciptakan masyarakat BSD Kota Santri. 
+                        SANTRI = pelajar yang ber-aqidah Ahlusunnah Wal Jamaah</li>
+                    </ol>
+                  </div>
               </section>
               <section id="activity" class="ouractivity">
                   <h1>OUR ACTIVITY</h1>
@@ -212,6 +235,9 @@
                 </div>
               </section>
             </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+              <img src="assets/image/arrow-up.png" alt="up" style="width: 20px;">
+            </button>
             <footer>
                 <div class="copyright">
                     @copyright KARIB 2022
@@ -238,7 +264,38 @@
                   setTimeout(showSlides, 3500); // Change image every 2 seconds
                 }
                 </script>
-                
+                <script>
+                 const hamburger = document.querySelector(".hamburger");
+                  const navMenu = document.querySelector(".nav-menu");
+
+                  hamburger.addEventListener("click", mobileMenu);
+
+                  function mobileMenu() {
+                      hamburger.classList.toggle("active");
+                      navMenu.classList.toggle("active");
+                  }
+                  </script>
+                  <script>
+                    //Get the button
+                    var mybutton = document.getElementById("myBtn");
+                    
+                    // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                      } else {
+                        mybutton.style.display = "none";
+                      }
+                    }
+                    
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+                    }
+                    </script>
         </body>
     </head>
 </html>
