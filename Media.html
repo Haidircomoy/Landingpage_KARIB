@@ -5,6 +5,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="assets/image/Logo.ico">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
         <title>KARIB</title>
         <body>
@@ -18,11 +19,11 @@
                 <label for="drop" class="toggle">Menu</label>
                 <input type="checkbox" id="drop" />
                 <ul class="menu">
-                  <li><a href="#">Beranda</a></li>
+                  <li><a href="index.html">Beranda</a></li>
                   <li>
                     <!-- First Tier Drop Down -->
                     <label for="drop-1" class="toggle">Divisi</label>
-                    <a href="index.html">Divisi</a>
+                    <a href="#">Divisi</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
                       <li><a href="Bisnis.html">Bisnis</a></li>
@@ -71,6 +72,20 @@
             <footer>
                 <div class="copyright">
                     @copyright KARIB 2022
+                </div>
+                <div class="footer-sosmed">
+                    <a>
+                        <img src="assets/icon/fb.png" alt="fb"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/ig.png" alt="ig"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/yt.png" alt="youtube"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/twitter.png" alt="twitter"/>
+                      </a>
                 </div>
             </footer>
             <script>
@@ -126,6 +141,21 @@
                       document.documentElement.scrollTop = 0;
                     }
                     </script>
+                    <style>
+                        footer {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 80%;
+                            margin: auto;
+                            margin-top: 32px;
+                        }
+
+                        @media screen and (max-width: 768px){
+                            footer {
+                                flex-direction: column-reverse;
+                            }
+                        }
+                    </style>
         </body>
     </head>
 </html>

@@ -71,6 +71,20 @@
                 <div class="copyright">
                     @copyright KARIB 2022
                 </div>
+                <div class="footer-sosmed">
+                    <a>
+                        <img src="assets/icon/fb.png" alt="fb"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/ig.png" alt="ig"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/yt.png" alt="youtube"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/twitter.png" alt="twitter"/>
+                      </a>
+                </div>
             </footer>
             <script>
                 let slideIndex = 0;
@@ -125,6 +139,21 @@
                       document.documentElement.scrollTop = 0;
                     }
                     </script>
+                    <style>
+                        footer {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 80%;
+                            margin: auto;
+                            margin-top: 32px;
+                        }
+
+                        @media screen and (max-width: 768px){
+                            footer {
+                                flex-direction: column-reverse;
+                            }
+                        }
+                    </style>
         </body>
     </head>
 </html>

@@ -19,8 +19,6 @@
                 <input type="checkbox" id="drop" />
                 <ul class="menu">
                   <li><a href="index.html">Beranda</a></li>
-                  <li><a href="#about">Tentang Kami</a></li>
-                  <li><a href="#activity">Aktifitas</a></li>
                   <li>
                     <!-- First Tier Drop Down -->
                     <label for="drop-1" class="toggle">Divisi</label>
@@ -34,7 +32,6 @@
                       <li><a href="Sosial.html">sosial</a></li>
                     </ul>
                   </li>
-                  <li><a href="#contact">Hubungi Kami</a></li>
                 </ul>
               </nav>
     </header>
@@ -73,6 +70,20 @@
             <footer>
                 <div class="copyright">
                     @copyright KARIB 2022
+                </div>
+                <div class="footer-sosmed">
+                    <a>
+                        <img src="assets/icon/fb.png" alt="fb"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/ig.png" alt="ig"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/yt.png" alt="youtube"/>
+                      </a>
+                      <a>
+                        <img src="assets/icon/twitter.png" alt="twitter"/>
+                      </a>
                 </div>
             </footer>
             <script>
@@ -128,6 +139,21 @@
                       document.documentElement.scrollTop = 0;
                     }
                     </script>
+                    <style>
+                        footer {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 80%;
+                            margin: auto;
+                            margin-top: 32px;
+                        }
+
+                        @media screen and (max-width: 768px){
+                            footer {
+                                flex-direction: column-reverse;
+                            }
+                        }
+                    </style>
         </body>
     </head>
 </html>
