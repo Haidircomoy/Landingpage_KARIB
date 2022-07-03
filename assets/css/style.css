@@ -257,6 +257,7 @@ input[type=radio].selecteur-4:checked ~ .contenu .slider > li:nth-child(4)
       width: 30%;
       margin-left: 10px;
       padding-bottom: 16px;
+      margin-bottom: 24px;
   }
 
   .card-header{
@@ -264,12 +265,23 @@ input[type=radio].selecteur-4:checked ~ .contenu .slider > li:nth-child(4)
     border-bottom: none !important;
   }
 
+  .card-image {
+    height: 150px !important;
+  }
+
   .card-image img {
       width: 80%;
+      height: 150px;
   }
 
   #contact {
     padding: 50px 0px;
+  }
+
+  #PI ol {
+    width: 80%;
+    text-align: left;
+    margin: auto;
   }
 
   .proker-PSDM {
